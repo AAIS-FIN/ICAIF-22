@@ -7,7 +7,7 @@
 
 # 3.Multivariate Realized Volatility Forecasting with Graph Neural Network
 ## 论文简述
-本文提出一种多变量预测方法，通过限价订单簿数据LOB来预测股票市场的短期波动。具体而言，本文通过加入GTN（Graph Neural Networks）图神经网络的方法（可以捕捉时序股票之间复杂关系，不仅仅是股票时序的协方差矩阵，还可以聚合节点之间的信息），以股票的种类和时间作为图的节点，通过训练目标指标、GICS行业细分和行业供应链之间的关系连接不同节点之间的边，从而实现数据的图结构化，提出的模型简称为`GTN-VF`。最后，本文以标普500的已实现波动率进行实证，模型结果相比于基线模型`Naive Guess`、`HAR-RV`，`LightGBM`，`MLP`，`TabNet`在不同$\Delta T$下有更小的RMSPE，证实了`GTN-VF`方法的有效性和稳健性。同时，本文提出的`GTN-VF`模型在考虑资产之间关系的情况下，比基准模型以及单独考虑关系信息的模型在所有预测时段上都表现出色。
+[本文](https://github.com/AAIS-FIN/ICAIF-22/blob/main/accepted-papers/3.Multivariate%20Realized%20Volatility%20Forecasting%20with%20Graph%20Neural%20Network.pdf)提出一种多变量预测方法，通过限价订单簿数据LOB来预测股票市场的短期波动。具体而言，本文通过加入GTN（Graph Neural Networks）图神经网络的方法（可以捕捉时序股票之间复杂关系，不仅仅是股票时序的协方差矩阵，还可以聚合节点之间的信息），以股票的种类和时间作为图的节点，通过训练目标指标、GICS行业细分和行业供应链之间的关系连接不同节点之间的边，从而实现数据的图结构化，提出的模型简称为`GTN-VF`。最后，本文以标普500的已实现波动率进行实证，模型结果相比于基线模型`Naive Guess`、`HAR-RV`，`LightGBM`，`MLP`，`TabNet`在不同$\Delta T$下有更小的RMSPE，证实了`GTN-VF`方法的有效性和稳健性。同时，本文提出的`GTN-VF`模型在考虑资产之间关系的情况下，比基准模型以及单独考虑关系信息的模型在所有预测时段上都表现出色。
 
 ## 论文核心方法
 ![](https://obsidian-1314863343.cos.ap-beijing.myqcloud.com/obsidian/pic/20230911142231.png)
@@ -21,7 +21,7 @@
 
 # 19.Synthetic Data Augmentation for Deep Reinforcement Learning in Financial Trading
 ## 论文简述
-本文主要研究问题是通过使用增强的合成数据（由TimeGAN实现）来训练深度强化学习（DRL）的agent进行金融交易，以解决金融交易中的数据稀缺性问题。通过使用真实和合成数据集进行训练，观察训练过程中奖励的稳定性，并评估其在股票市场和加密货币市场（实证采用的是谷歌股票和比特币）上的性能，得到结论：由合成数据训练的agent比由真实数据训练的agent获得的利润更高，同时具有相似的鲁棒性。
+[本文](https://github.com/AAIS-FIN/ICAIF-22/blob/main/accepted-papers/19.Synthetic%20Data%20Augmentation%20for%20Deep%20Reinforcement%20Learning%20in%20Financial%20Trading.pdf)主要研究问题是通过使用增强的合成数据（由TimeGAN实现）来训练深度强化学习（DRL）的agent进行金融交易，以解决金融交易中的数据稀缺性问题。通过使用真实和合成数据集进行训练，观察训练过程中奖励的稳定性，并评估其在股票市场和加密货币市场（实证采用的是谷歌股票和比特币）上的性能，得到结论：由合成数据训练的agent比由真实数据训练的agent获得的利润更高，同时具有相似的鲁棒性。
 
 ## 论文核心方法
 前人TimeGAN方法简述：
@@ -40,7 +40,7 @@
 
 # 34.Asset Price and Direction Prediction via Deep 2D Transformer and Convolutional Neural Networks
 ## 论文简述
-本文的主要研究问题是如何使用CV技术预测金融资产价格并开发对应算法交易策略（采用CNN的类似研究也不多）。本文开发了两种方法，分别基于二维深度注意力神经网络(DAPP)和基于二维深度补丁嵌入卷积神经网络(DPPP)。文章通过分析不同金融时间序列ETF数据，通过OHLCV以及Ta-Lib上的技术指标，将其转换为二维图像（$65 \times 65$）作为输入，以buy，sell，hold作为分类输出，从而实现择时策略。本文实验结果表明，DAPP和DPPP的预测准确度较高，并且在长期的样本外测试期内表现优于基线方法和买入持有策略。此外，注意力机制和补丁嵌入能够提高资产价格和方向预测性能。
+[本文](https://github.com/AAIS-FIN/ICAIF-22/blob/main/accepted-papers/34.Asset%20Price%20and%20Direction%20Prediction%20via%20Deep%202D%20Transformer%20and%20Convolutional%20Neural%20Networks.pdf)的主要研究问题是如何使用CV技术预测金融资产价格并开发对应算法交易策略（采用CNN的类似研究也不多）。本文开发了两种方法，分别基于二维深度注意力神经网络(DAPP)和基于二维深度补丁嵌入卷积神经网络(DPPP)。文章通过分析不同金融时间序列ETF数据，通过OHLCV以及Ta-Lib上的技术指标，将其转换为二维图像（$65 \times 65$）作为输入，以buy，sell，hold作为分类输出，从而实现择时策略。本文实验结果表明，DAPP和DPPP的预测准确度较高，并且在长期的样本外测试期内表现优于基线方法和买入持有策略。此外，注意力机制和补丁嵌入能够提高资产价格和方向预测性能。
 
 ## 论文核心方法
 本文主要思路是将金融资产的时间序列数据转换为二维图像，最后接一个分类器作为buy，sell，hold的交易策略。核心部分是图像处理的两种特征方法：DAPP方法使用注意力机制增强模型对关键信息的关注，而DPPP方法则使用补丁嵌入结构来捕捉图像中的局部特征。
@@ -55,7 +55,7 @@
 
 # 39.Temporal Bipartite Graph Neural Networks for Bond Prediction
 ## 论文简述
-本文主要研究问题是如何利用债券基金的数据信息来预测债券价格和收益率。由于二级市场中债券交易不频繁，导致数据观测不连续和存在缺失。为了解决这一挑战，本文并不采用传统的缺失值插补，而是建立一种基于时间双分图神经网络（TBGNN）的模型，包括学习债券和基金（债券基金）之间的节点嵌入以及它们相关因素的双分图表示模块，用于建模时间间隔的LSTM模块，以及使用图结构对未标记节点表示进行正则化的自监督目标。通过小批量随机梯度下降的训练过程，减轻了不同模块和目标的模型复杂性和计算成本。研究结果表明，TBGNN模型在债券价格和收益率预测上提供了更准确的预测能力（评价标准为$RSME,MAE,MAPE,R^2$，对照的基线模型为LSTM、GRU、GCN-LSTM、GraphSage-LSTM和GAT-LSTM）。
+[本文](https://github.com/AAIS-FIN/ICAIF-22/blob/main/accepted-papers/39.Temporal%20Bipartite%20Graph%20Neural%20Networks%20for%20Bond%20Prediction.pdf)主要研究问题是如何利用债券基金的数据信息来预测债券价格和收益率。由于二级市场中债券交易不频繁，导致数据观测不连续和存在缺失。为了解决这一挑战，本文并不采用传统的缺失值插补，而是建立一种基于时间双分图神经网络（TBGNN）的模型，包括学习债券和基金（债券基金）之间的节点嵌入以及它们相关因素的双分图表示模块，用于建模时间间隔的LSTM模块，以及使用图结构对未标记节点表示进行正则化的自监督目标。通过小批量随机梯度下降的训练过程，减轻了不同模块和目标的模型复杂性和计算成本。研究结果表明，TBGNN模型在债券价格和收益率预测上提供了更准确的预测能力（评价标准为$RSME,MAE,MAPE,R^2$，对照的基线模型为LSTM、GRU、GCN-LSTM、GraphSage-LSTM和GAT-LSTM）。
 
 ## 论文核心方法
 ![](https://obsidian-1314863343.cos.ap-beijing.myqcloud.com/obsidian/pic/20230915174747.png)
@@ -76,11 +76,11 @@
 
 # 47.Objective Driven Portfolio Construction Using Reinforcement Learning
 ## 论文简述
-本文的主要研究问题是利用深度学习和机器学习方法建模交易者行为，具体方法是加入3个投资者目标：Information Ratio，Maximum Drawdown和Turnover，实证以BIST 100指数进行分析。最后本文还希望对模型进行解释，采用传统方法和简单机器学习模型来模拟神经网络结果（包括Lasso，Elastic Net和Random Forest），依据$R^2$来解释，同时还采用Random Forest自带的特征重要程度排序，验证了传统线性方法的不足，并探究了不同超参数下DRL方法的表现。
+[本文](https://github.com/AAIS-FIN/ICAIF-22/blob/main/accepted-papers/47.Objective%20Driven%20Portfolio%20Construction%20Using%20Reinforcement%20Learning.pdf)的主要研究问题是利用深度学习和机器学习方法建模交易者行为，具体方法是加入3个投资者目标：Information Ratio，Maximum Drawdown和Turnover，实证以BIST 100指数进行分析。最后本文还希望对模型进行解释，采用传统方法和简单机器学习模型来模拟神经网络结果（包括Lasso，Elastic Net和Random Forest），依据$R^2$来解释，同时还采用Random Forest自带的特征重要程度排序，验证了传统线性方法的不足，并探究了不同超参数下DRL方法的表现。
 
 ## 论文核心方法
 首先本文基于已有的前人强化学习投资框架**AlphaPortfolio**如下：
-![|500](https://obsidian-1314863343.cos.ap-beijing.myqcloud.com/obsidian/pic/20230917092411.png)
+![](https://obsidian-1314863343.cos.ap-beijing.myqcloud.com/obsidian/pic/20230917092411.png)
 
 框架模块解释：
 - 最新的序列表示提取模型（sequence representation extraction models， SREM），如Transformer编码器（TE）和长短期记忆（LSTM），以便灵活有效地表示和提取来自输入特征的时间序列的信息，如公司的基本面和市场信号，即环境状态。
