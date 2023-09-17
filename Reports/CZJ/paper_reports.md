@@ -7,7 +7,7 @@
 
 # 3.Multivariate Realized Volatility Forecasting with Graph Neural Network
 ## 论文简述
-[本文](https://github.com/AAIS-FIN/ICAIF-22/blob/main/accepted-papers/3.Multivariate%20Realized%20Volatility%20Forecasting%20with%20Graph%20Neural%20Network.pdf)提出一种多变量预测方法，通过限价订单簿数据LOB来预测股票市场的短期波动。具体而言，本文通过加入GTN（Graph Neural Networks）图神经网络的方法（可以捕捉时序股票之间复杂关系，不仅仅是股票时序的协方差矩阵，还可以聚合节点之间的信息），以股票的种类和时间作为图的节点，通过训练目标指标、GICS行业细分和行业供应链之间的关系连接不同节点之间的边，从而实现数据的图结构化，提出的模型简称为`GTN-VF`。最后，本文以标普500的已实现波动率进行实证，模型结果相比于基线模型`Naive Guess`、`HAR-RV`，`LightGBM`，`MLP`，`TabNet`在不同$`\Delta T`$下有更小的RMSPE，证实了`GTN-VF`方法的有效性和稳健性。同时，本文提出的`GTN-VF`模型在考虑资产之间关系的情况下，比基准模型以及单独考虑关系信息的模型在所有预测时段上都表现出色。
+[本文](https://github.com/AAIS-FIN/ICAIF-22/blob/main/accepted-papers/3.Multivariate%20Realized%20Volatility%20Forecasting%20with%20Graph%20Neural%20Network.pdf)提出一种多变量预测方法，通过限价订单簿数据LOB来预测股票市场的短期波动。具体而言，本文通过加入GTN（Graph Neural Networks）图神经网络的方法（可以捕捉时序股票之间复杂关系，不仅仅是股票时序的协方差矩阵，还可以聚合节点之间的信息），以股票的种类和时间作为图的节点，通过训练目标指标、GICS行业细分和行业供应链之间的关系连接不同节点之间的边，从而实现数据的图结构化，提出的模型简称为`GTN-VF`。最后，本文以标普500的已实现波动率进行实证，模型结果相比于基线模型`Naive Guess`、`HAR-RV`，`LightGBM`，`MLP`，`TabNet`在不同$\Delta T$下有更小的RMSPE，证实了`GTN-VF`方法的有效性和稳健性。同时，本文提出的`GTN-VF`模型在考虑资产之间关系的情况下，比基准模型以及单独考虑关系信息的模型在所有预测时段上都表现出色。
 
 ## 论文核心方法
 ![](https://obsidian-1314863343.cos.ap-beijing.myqcloud.com/obsidian/pic/20230911142231.png)
