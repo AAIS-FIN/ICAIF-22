@@ -17,7 +17,7 @@
 ## 对论文的思考
 - 模型解释性：虽然该论文利用GTN在预测短期波动性方面表现优秀，但对于模型的解释性较为欠缺。未来的改进可以探索如何更好地解释模型的预测结果，例如通过可解释的图结构或特征的重要性分析，或者加入有关金融先验知识（如波动率曲面）。
 - 不同市场的验证：论文实验结果在S&P 500指数的500只股票上的表现优于其他基准模型。为了提高对于该模型的说服力，可以在多个数据集或具有不同特征的市场上进行进一步的验证，比如加入中国市场的ETF50。
-- 模型结构：本文是采用end to end学习方式，但是用前$\Delta T^ \prime$的数据预测后$\Delta T$的数据，应该是seq to seq的学习方式更合适，可以在整体上加入类似于RNN的模型。 
+- 模型结构：本文是采用end to end学习方式，但是用前 $\Delta T^ \prime$ 的数据预测后 $\Delta T$ 的数据，应该是seq to seq的学习方式更合适，可以在整体上加入类似于RNN的模型。 
 
 # 19.Synthetic Data Augmentation for Deep Reinforcement Learning in Financial Trading
 ## 论文简述
@@ -40,7 +40,7 @@
 
 # 34.Asset Price and Direction Prediction via Deep 2D Transformer and Convolutional Neural Networks
 ## 论文简述
-[本文](https://github.com/AAIS-FIN/ICAIF-22/blob/main/accepted-papers/34.Asset%20Price%20and%20Direction%20Prediction%20via%20Deep%202D%20Transformer%20and%20Convolutional%20Neural%20Networks.pdf)的主要研究问题是如何使用CV技术预测金融资产价格并开发对应算法交易策略（采用CNN的类似研究也不多）。本文开发了两种方法，分别基于二维深度注意力神经网络(DAPP)和基于二维深度补丁嵌入卷积神经网络(DPPP)。文章通过分析不同金融时间序列ETF数据，通过OHLCV以及Ta-Lib上的技术指标，将其转换为二维图像（$65 \times 65$）作为输入，以buy，sell，hold作为分类输出，从而实现择时策略。本文实验结果表明，DAPP和DPPP的预测准确度较高，并且在长期的样本外测试期内表现优于基线方法和买入持有策略。此外，注意力机制和补丁嵌入能够提高资产价格和方向预测性能。
+[本文](https://github.com/AAIS-FIN/ICAIF-22/blob/main/accepted-papers/34.Asset%20Price%20and%20Direction%20Prediction%20via%20Deep%202D%20Transformer%20and%20Convolutional%20Neural%20Networks.pdf)的主要研究问题是如何使用CV技术预测金融资产价格并开发对应算法交易策略（采用CNN的类似研究也不多）。本文开发了两种方法，分别基于二维深度注意力神经网络(DAPP)和基于二维深度补丁嵌入卷积神经网络(DPPP)。文章通过分析不同金融时间序列ETF数据，通过OHLCV以及Ta-Lib上的技术指标，将其转换为二维图像（ $65 \times 65$ ）作为输入，以buy，sell，hold作为分类输出，从而实现择时策略。本文实验结果表明，DAPP和DPPP的预测准确度较高，并且在长期的样本外测试期内表现优于基线方法和买入持有策略。此外，注意力机制和补丁嵌入能够提高资产价格和方向预测性能。
 
 ## 论文核心方法
 本文主要思路是将金融资产的时间序列数据转换为二维图像，最后接一个分类器作为buy，sell，hold的交易策略。核心部分是图像处理的两种特征方法：DAPP方法使用注意力机制增强模型对关键信息的关注，而DPPP方法则使用补丁嵌入结构来捕捉图像中的局部特征。
@@ -55,7 +55,7 @@
 
 # 39.Temporal Bipartite Graph Neural Networks for Bond Prediction
 ## 论文简述
-[本文](https://github.com/AAIS-FIN/ICAIF-22/blob/main/accepted-papers/39.Temporal%20Bipartite%20Graph%20Neural%20Networks%20for%20Bond%20Prediction.pdf)主要研究问题是如何利用债券基金的数据信息来预测债券价格和收益率。由于二级市场中债券交易不频繁，导致数据观测不连续和存在缺失。为了解决这一挑战，本文并不采用传统的缺失值插补，而是建立一种基于时间双分图神经网络（TBGNN）的模型，包括学习债券和基金（债券基金）之间的节点嵌入以及它们相关因素的双分图表示模块，用于建模时间间隔的LSTM模块，以及使用图结构对未标记节点表示进行正则化的自监督目标。通过小批量随机梯度下降的训练过程，减轻了不同模块和目标的模型复杂性和计算成本。研究结果表明，TBGNN模型在债券价格和收益率预测上提供了更准确的预测能力（评价标准为$RSME,MAE,MAPE,R^2$，对照的基线模型为LSTM、GRU、GCN-LSTM、GraphSage-LSTM和GAT-LSTM）。
+[本文](https://github.com/AAIS-FIN/ICAIF-22/blob/main/accepted-papers/39.Temporal%20Bipartite%20Graph%20Neural%20Networks%20for%20Bond%20Prediction.pdf)主要研究问题是如何利用债券基金的数据信息来预测债券价格和收益率。由于二级市场中债券交易不频繁，导致数据观测不连续和存在缺失。为了解决这一挑战，本文并不采用传统的缺失值插补，而是建立一种基于时间双分图神经网络（TBGNN）的模型，包括学习债券和基金（债券基金）之间的节点嵌入以及它们相关因素的双分图表示模块，用于建模时间间隔的LSTM模块，以及使用图结构对未标记节点表示进行正则化的自监督目标。通过小批量随机梯度下降的训练过程，减轻了不同模块和目标的模型复杂性和计算成本。研究结果表明，TBGNN模型在债券价格和收益率预测上提供了更准确的预测能力（评价标准为 $RSME,MAE,MAPE,R^2$ ，对照的基线模型为LSTM、GRU、GCN-LSTM、GraphSage-LSTM和GAT-LSTM）。
 
 ## 论文核心方法
 ![](https://obsidian-1314863343.cos.ap-beijing.myqcloud.com/obsidian/pic/20230915174747.png)
@@ -76,7 +76,7 @@
 
 # 47.Objective Driven Portfolio Construction Using Reinforcement Learning
 ## 论文简述
-[本文](https://github.com/AAIS-FIN/ICAIF-22/blob/main/accepted-papers/47.Objective%20Driven%20Portfolio%20Construction%20Using%20Reinforcement%20Learning.pdf)的主要研究问题是利用深度学习和机器学习方法建模交易者行为，具体方法是加入3个投资者目标：Information Ratio，Maximum Drawdown和Turnover，实证以BIST 100指数进行分析。最后本文还希望对模型进行解释，采用传统方法和简单机器学习模型来模拟神经网络结果（包括Lasso，Elastic Net和Random Forest），依据$R^2$来解释，同时还采用Random Forest自带的特征重要程度排序，验证了传统线性方法的不足，并探究了不同超参数下DRL方法的表现。
+[本文](https://github.com/AAIS-FIN/ICAIF-22/blob/main/accepted-papers/47.Objective%20Driven%20Portfolio%20Construction%20Using%20Reinforcement%20Learning.pdf)的主要研究问题是利用深度学习和机器学习方法建模交易者行为，具体方法是加入3个投资者目标：Information Ratio，Maximum Drawdown和Turnover，实证以BIST 100指数进行分析。最后本文还希望对模型进行解释，采用传统方法和简单机器学习模型来模拟神经网络结果（包括Lasso，Elastic Net和Random Forest），依据 $R^2$ 来解释，同时还采用Random Forest自带的特征重要程度排序，验证了传统线性方法的不足，并探究了不同超参数下DRL方法的表现。
 
 ## 论文核心方法
 首先本文基于已有的前人强化学习投资框架**AlphaPortfolio**如下：
