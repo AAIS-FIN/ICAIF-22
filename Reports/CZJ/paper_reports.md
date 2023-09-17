@@ -80,7 +80,8 @@
 
 ## 论文核心方法
 首先本文基于已有的前人强化学习投资框架**AlphaPortfolio**如下：
-![](https://obsidian-1314863343.cos.ap-beijing.myqcloud.com/obsidian/pic/20230917092411.png)
+![|500](https://obsidian-1314863343.cos.ap-beijing.myqcloud.com/obsidian/pic/20230917092411.png)
+
 框架模块解释：
 - 最新的序列表示提取模型（sequence representation extraction models， SREM），如Transformer编码器（TE）和长短期记忆（LSTM），以便灵活有效地表示和提取来自输入特征的时间序列的信息，如公司的基本面和市场信号，即环境状态。
 - 跨资产注意力网络（cross-asset attention networks， CAANs），可捕捉跨资产的属性互动，本质上是利用注意力机制的Q，K，V矩阵计算不同资产之间的相关程度，最后生成一个 "赢家得分"，对资产和交易（policy和action）进行排名，随后评估投资组合的表现，即考察回报。
