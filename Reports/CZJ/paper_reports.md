@@ -1,9 +1,9 @@
 # 本次汇报的论文
-3.Multivariate Realized Volatility Forecasting with Graph Neural Network
-19.Synthetic Data Augmentation for Deep Reinforcement Learning in Financial Trading
-34.Asset Price and Direction Prediction via Deep 2D Transformer and Convolutional Neural Networks
-39.Temporal Bipartite Graph Neural Networks for Bond Prediction
-47.Objective Driven Portfolio Construction Using Reinforcement Learning
+- 3.Multivariate Realized Volatility Forecasting with Graph Neural Network
+- 19.Synthetic Data Augmentation for Deep Reinforcement Learning in Financial Trading
+- 34.Asset Price and Direction Prediction via Deep 2D Transformer and Convolutional Neural Networks
+- 39.Temporal Bipartite Graph Neural Networks for Bond Prediction
+- 47.Objective Driven Portfolio Construction Using Reinforcement Learning
 
 # 3.Multivariate Realized Volatility Forecasting with Graph Neural Network
 ## 论文简述
